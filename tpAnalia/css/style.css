@@ -1,0 +1,868 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Lato", sans-serif;
+  /*background-color:#5499F8;*/
+}
+
+.container1280 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.elastico {
+  width: 100%;
+  display: block; /*para que cubra todo el ancho de la pantalla*/
+}
+
+.fijo {
+  margin: auto;
+  position: relative;
+  /*PARA PODER COLOCAR IMAGENES SOBRE LOS CONTENEDORES*/
+}
+
+/*HEADER*/
+
+header {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+  background-color: #5499f9;
+  z-index: 8;
+}
+
+/*HICE LA BARRITA A MANO*/
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0px 0px 0px 8%;
+  padding: 0px;
+  border: 0px;
+}
+
+.barritaMenu {
+  height: 4px;
+  width: 34px;
+  margin: 1px;
+  background-color: #ffe901;
+  border: 4px solid #2981ff;
+  border-radius: 10px;
+  box-shadow: 4px 5px 0px 0px #02187e;
+  transition: all 0.5s;
+  transform-origin: left;
+}
+
+.menu:hover div:first-child {
+  transform: rotate(45deg);
+  box-shadow: 0px 0px 0px 0px #02187e; /*LE SACAMOS LA SOMBRA PARA QUE SE NOTE MEJOR LA CRUZ!!*/
+}
+
+.menu:hover div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu:hover div:last-child {
+  transform: rotate(-42deg);
+  box-shadow: 0px 0px 0px 0px #02187e; /*LE SACAMOS LA SOMBRA PARA QUE SE NOTE MEJOR LA CRUZ!!*/
+}
+
+.btnComprar {
+  width: 200px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 111px;
+  border: 8px solid #2982ff;
+  background: #ffe901;
+  /* Drop Shadow */
+  box-shadow: 4px 5px 0px 0px #02187e;
+  color: #02187e;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 94.5%;
+  /* 18.9px */
+  letter-spacing: 2.2px;
+  margin: 0px 100px 0px 0px;
+  -webkit-text-stroke: 2px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0px;
+  /*DONDE LO VOY A PEGAR, OSEA DESDE EL INICIO*/
+}
+
+.logo {
+  background-color: transparent;
+  z-index: 9;
+  /*EL LOGO TIENE MAYOR Z-INDEX PORQUE SIEMPRE TIENE QUE ESTAR ARRIBA*/
+  position: absolute;
+  /*PARA COLOCARLO ARRIBA DE LAS NUBES*/
+  top: 120px;
+}
+
+#logo.pequeño {
+  position: fixed; /* SOLUCIONAR ESTO!!!!*/
+  transform: scale(
+    0.3
+  ); /* Cambia el valor según lo que desees, 0.5 es solo un ejemplo */
+  transform-origin: top left; /* Ajusta el origen de la transformación según tus necesidades */
+  top: 0px;
+  left: 45%;
+}
+
+.fondoNubes {
+  width: 100%;
+  position: relative;
+}
+
+.fondoNubes img {
+  width: 100%;
+  height: 720px; /*LE DEJAMOS SU ALTURA ORIGINAL*/
+  margin-top: 0px;
+}
+
+.edificios {
+  display: flex;
+  position: relative;
+  top: -420px;
+  justify-content: center;
+  align-items: baseline;
+  /*Los alineo*/
+  z-index: 1;
+}
+
+.edificios img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.spidermansPortada {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+.spideyBlanco {
+  position: relative;
+  top: -870px;
+  left: 50px;
+}
+
+.spideyNormal {
+  position: relative;
+  top: -870px;
+  left: 10px;
+}
+
+.spideyNegro {
+  position: relative;
+  top: -930px;
+  left: -150px;
+}
+
+.telarañas {
+  display: flex;
+  z-index: 3;
+  position: relative;
+}
+
+.telaIzquierda {
+  position: relative;
+  top: -1367px;
+  left: -185px;
+}
+
+.telaDerecha {
+  position: relative;
+  top: -1350px;
+  left: 230px;
+}
+
+.telaIzquierda img,
+.telaDerecha img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.spidermansRecuadrosTexto div p {
+  width: 333px;
+  height: 218px;
+  flex-shrink: 0;
+  color: #000;
+
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*CHEQUEAR COMO MANTENER FIJO ALGO CON POSICION ABSOLUTA*/
+
+.rectanguloVioleta {
+  position: relative;
+  top: -1630px;
+  z-index: 1;
+}
+
+.rectanguloVioleta img {
+  width: 100%;
+  height: 844px;
+}
+
+.recVioletaContenido {
+  display: flex;
+  position: absolute;
+  top: 16%;
+  left: 8.6%;
+}
+.edifVerde img {
+  width: auto;
+  height: auto;
+}
+
+.duendeCalabaza {
+  position: absolute;
+  top: 20px;
+  /*PREGUNTAR SI ESTA BIEN POSICIONAR EN NEGATIVO*/
+  left: 630px;
+}
+
+/*HAGO ESTO PORQUE SINO SE AGRANDA DEMASIADO*/
+.duendeCalabaza img {
+  width: auto;
+  height: auto;
+}
+
+/*ACA JUNTAMOS TITULO, PARRAFO E IMAGEN EDIFICIO*/
+.imgEdificioYTexto {
+  display: flex;
+  flex-direction: column;
+}
+
+.imgEdificioYTexto p {
+  width: 586px;
+  height: 154px;
+  flex-shrink: 0;
+  color: #fff;
+  padding-top: 24px;
+  margin-left: 0px;
+
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.imgEdificioYTexto h2 {
+  width: 646px;
+  color: #fff;
+  font-family: Lato;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 94.5%;
+  /* 56.7px */
+  margin-left: 0px;
+}
+
+/*RECUADROS SPIDERMANS*/
+
+.contenedorRecuadros {
+  height: 1085px;
+  margin-top: -1400px;
+}
+
+.spidermansRecuadros {
+  display: flex;
+  justify-content: space-evenly;
+  /*Modificar*/
+}
+.spidermansRecuadros img {
+  width: auto;
+  height: auto;
+}
+
+.spidermansRecuadrosTexto {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*RUTAS*/
+
+.rectanguloSpidermanBlanco img {
+  width: 100%;
+  height: 790px; /*Tuve que ponerle el tamaño exacto a la img*/
+  margin: -200px; /*DUDA QUEDO AHI PORQUE SE DIO*/
+}
+
+.rectanguloSpidermanBlanco {
+  position: relative;
+  top: -300px;
+  left: 200px;
+  display: block;
+}
+
+.ruta1 {
+  position: relative;
+  top: -820px;
+  left: 50px;
+  &:hover {
+    transform: scale(1.2);
+    transition: 1s;
+  }
+}
+
+.ruta2 {
+  position: relative;
+  top: -1120px;
+  left: 40px;
+  &:hover {
+    transform: scale(1.2);
+    transition: 1s;
+  }
+}
+
+.ruta3 {
+  position: relative;
+  top: -1470px;
+  left: 70px;
+  &:hover {
+    transform: scale(1.2);
+    transition: 1s;
+  }
+}
+
+/*VENGADORES*/
+
+.fondoContenedorVengadores {
+  background-color: black;
+  margin-top: -1800px;
+  height: 569px;
+
+  /*TENGO QUE DARLE LA CURVA ABAJO*/
+}
+
+.contenedorVengadores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.tituloVengadores {
+  width: 667px;
+  padding-top: 150px;
+  color: #fff;
+  font-family: Lato;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 94.5%;
+  margin-top: 150px;
+  /* 56.7px */
+}
+
+.nubesVengadores {
+  z-index: 3;
+  position: relative;
+  margin-top: 225px;
+}
+
+.hojasVengadores {
+  z-index: 5;
+  position: relative;
+  top: -531px;
+}
+
+.arbolesVengadores {
+  z-index: 4;
+  position: relative;
+  top: -1050px;
+  margin-top: -13px;
+}
+
+#parallax {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+
+  z-index: 6;
+  background-repeat: no-repeat;
+}
+
+.layer-1 {
+  position: absolute;
+  top: 285px;
+  left: 601px;
+  width: 328px;
+  height: 400px;
+  pointer-events: none;
+  z-index: 6;
+  background-repeat: no-repeat;
+  background-image: url("../img/hulk.png");
+}
+
+.layer-2 {
+  position: absolute;
+  bottom: 0;
+  top: 122px;
+  left: 967px;
+  width: 400px;
+  height: 564px;
+  pointer-events: none;
+  z-index: 6;
+  background-repeat: no-repeat;
+  background-image: url("../img/pumaNegro.png");
+}
+
+.layer-3 {
+  position: absolute;
+  top: 115px;
+  left: 1326px;
+  width: 400px;
+  height: 624px;
+  pointer-events: none;
+  z-index: 6;
+  background-repeat: no-repeat;
+  background-image: url("../img/elastica.png");
+}
+
+#marco {
+  position: absolute;
+  z-index: 10;
+  background-color: #0000;
+  border: #fff solid 127px;
+  padding: 262px 530px;
+  left: 475px;
+}
+
+
+
+.mujerElastica {
+  z-index: 6;
+}
+
+.pumaNegro {
+  z-index: 6;
+}
+
+.hulk {
+  z-index: 6;
+}
+
+.contenedorTextoCambiante {
+  margin-bottom: 200px;
+}
+
+.tituloSeccionImgConTexto {
+  padding-top: 100px;
+}
+
+.separador2 {
+  position: relative;
+  top: 0;
+  left: -100px;
+  width: 1280px;
+  height: 150px;
+  background: #000000;
+  z-index: -1;
+  transform: skewY(5deg);
+  transform-origin: top right;
+}
+
+.separador3 {
+  position: relative;
+  top: 110px;
+  left: 0;
+  margin-left: -100px;
+  width: 1280px;
+  height: 120px;
+  background: #000000;
+  transform: skewY(-5deg);
+  transform-origin: top left;
+  z-index: -1;
+}
+
+/*EL CONTENEDOR ES ELASTICO LO DE ADENTRO ES FIJO*/
+.fondoContenedorParrafoYBoton {
+  background-color: black;
+}
+
+.contenedorParrafoYBoton p {
+  color: #fff;
+  font-family: Lato;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 8.1%;
+  padding-right: 28.1%;
+  margin-top: -90px;
+}
+
+.contenedorParrafoYBoton button {
+  border-radius: 111px;
+  border: 8px solid var(--2982-ff, #2982ff);
+  background: #ffe901;
+  width: 292px;
+  height: 50px;
+  /* Drop Shadow */
+  box-shadow: 4px 5px 0px 0px #02187e;
+
+  /* Tipografia*/
+  color: #02187e;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 94.5%;
+  /* 18.9px */
+  letter-spacing: 2.2px;
+  margin-left: 110px;
+  margin-top: 40px;
+  -webkit-text-stroke: 2px;
+}
+
+/*IMAGENES CON TEXTO*/
+
+.seccion-imagenes-con-texto {
+  display: flex;
+  padding-top: 00px;
+}
+
+.seccion-img img {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.textoCambiante p {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/*titulo mas amigos, mas diversion*/
+.fijo h2 {
+  width: 802px;
+  color: #000;
+  font-family: Lato;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 94.5%;
+  /* 56.7px */
+  margin: 50px;
+  margin-left: 0px;
+}
+
+.textoCambiante {
+  padding: 50px;
+}
+
+.textoCambiante h3 {
+  color: #000;
+  font-family: Lato;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  /* 37.8px */
+}
+
+.textoCambiante p {
+  color: #000;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  /* 18.9px */
+}
+
+.contenedorSpidermans {
+  position: relative;
+}
+
+.los3Spidermans {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  display: flex;
+  padding-left: 190px;
+  align-items: center;
+}
+
+.tituloCorreoElectronico {
+  width: 816px;
+  color: #000;
+  text-align: center;
+  font-family: Lato;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 94.5%;
+  /* 56.7px */
+  margin-left: 250px;
+}
+
+.contenedorBuscador {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.buscadorIzquierda {
+  width: 562px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 50px 0px 0px 50px;
+  border-top: 9px solid #2982ff;
+  border-bottom: 9px solid #2982ff;
+  border-left: 9px solid #2982ff;
+  background: #fff;
+  /* Drop Shadow */
+  box-shadow: 4px 5px 0px 0px #02187e;
+  margin-right: 0px;
+}
+
+.buscadorDerecha {
+  width: 218px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 0px 50px 50px 0px;
+  border: 9px solid #2982ff;
+  background: #ffe901;
+  /* Drop Shadow */
+  box-shadow: 4px 5px 0px 0px #02187e;
+  color: #02187e;
+}
+
+.fijo .buscadorIzquierda p {
+  color: rgba(0, 0, 0, 0.39);
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  /* 18.9px */
+  letter-spacing: 2.2px;
+  margin-top: 41px;
+  margin-right: 250px;
+}
+
+.buscadorDerecha P {
+  /*Tipografia*/
+  font-family: Lato;
+  font-size: 20px;
+  font-style: bold;
+  font-weight: 900;
+  line-height: 94.5%;
+  /* 18.9px */
+  letter-spacing: 2.2px;
+  text-align: center;
+  margin-top: 41px;
+}
+
+.fijo .parrafoCorreo {
+  width: 578px;
+  height: 95px;
+  flex-shrink: 0;
+  margin-top: 30px;
+  justify-content: center;
+  text-align: start;
+  margin-left: 330px;
+}
+
+.fijo .parrafoCorreo p {
+  color: #000;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  /* 18.9px */
+}
+
+.fijo .parrafoCorreo span {
+  color: #000;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  text-decoration-line: underline;
+}
+
+.fondoCieloInferior {
+  position: relative;
+}
+
+.fondoCieloInferior img {
+  width: 100%;
+}
+
+.suscripcion {
+  position: absolute;
+  top: 8%;
+}
+
+.fondoEdificiosInferior {
+  position: absolute;
+  top: 44.5%;
+  left: 0px;
+  width: 100%;
+}
+
+.fondoEdificiosInferior img {
+  width: 100%;
+}
+
+.teen {
+  position: absolute;
+  top: 100%;
+  left: 31%;
+}
+
+.lineaSuperiorFooter {
+  height: 80px;
+  background-color: #242424;
+}
+
+.lineaSuperiorFooter div {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.footerFondoGris {
+  height: 598px;
+  background-color: #5e5e5d;
+}
+
+.textoFooter {
+  width: 820px;
+  height: 361px;
+  padding-left: 100px;
+  padding-top: 38px;
+  padding-right: 360px;
+  padding-bottom: 199px;
+}
+
+.textoFooter .p1 {
+  color: #fff;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  /* 18.9px */
+  letter-spacing: 2.2px;
+}
+
+.textoFooter .p2 {
+  color: #fff;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  letter-spacing: 2.2px;
+  text-decoration-line: underline;
+  margin-top: 20px;
+}
+
+.textoFooter div {
+  padding-top: 38px;
+}
+#loading {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2;
+}
+#body-loader {
+  overflow: hidden;
+  background-color: rgb(71, 47, 47);
+}
+#loader {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#loader div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: end;
+  gap: 1.8rem;
+}
+#loader img {
+  width: 200px;
+  height: 200px;
+  animation: loading 3s alternate infinite;
+}
+#loader p {
+  font-style: italic;
+  font-family: cursive;
+  color: #fff;
+  font-size: 30px;
+  content: "";
+}
+
+#loader p::after {
+  position: absolute;
+  content: "";
+  animation: cargando 1.2s linear infinite;
+}
+
+#loader .percent {
+  position: absolute;
+  right: 48.5%;
+  top: 70.8%;
+  font-style: italic;
+  font-family: cursive;
+  font-size: 20px;
+  color: #999;
+  width: min-content;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes cargando {
+  0% {
+    content: ".";
+    opacity: 0;
+  }
+  60% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+
+    opacity: 1;
+  }
+}
